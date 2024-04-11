@@ -12,7 +12,7 @@ import (
 
 var suffix = flag.String("suffix", "", "Suffix to append to the processed files. If empty, original file is overwritten")
 var normalize = flag.Bool("normalize", false, "Normalize profile, see https://pkg.go.dev/github.com/grafana/pyroscope/pkg/pprof#Profile.Normalize")
-var concurrency = flag.Int("concurrency", 1, "max concurrency")
+var concurrency = flag.Int("concurrency", 10, "max concurrency")
 
 type profileFix func(*pprof.Profile)
 
